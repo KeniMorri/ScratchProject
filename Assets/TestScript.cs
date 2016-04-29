@@ -21,13 +21,14 @@ public class TestScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/*
 		movement.Set (0f, 0f, 1f);
 		//Debug.Log (movement);
 		// Normalise the movement vector and make it proportional to the speed per second.
 		movement = movement.normalized * speed * Time.deltaTime;
 
 		// Move the player to it's current position plus the movement.
-		playerRigidbody.MovePosition (transform.position + movement);
+		playerRigidbody.MovePosition (transform.position + movement); */
 		test++;
 		if ((test % 400) == 0) {
 			anim.SetBool ("Next", true);
