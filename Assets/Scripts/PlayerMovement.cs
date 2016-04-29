@@ -45,13 +45,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Move (float h, float v) {
 		
-		Vector3 movement = new Vector3 (h, 0.0f, (0.4f + v) );
+		Vector3 movement = new Vector3 (h, 0.0f, (0.0f + v) );
 		playerRigidbody.velocity = (movement * speed);
-		/* This is supposed to make it so character can't leave boundary, but i can't get it to work properly
+		// This is supposed to make it so character can't leave boundary, but i can't get it to work properly
 		playerRigidbody.position = new Vector3 (
 			Mathf.Clamp(playerRigidbody.position.x, boundary.xMin,boundary.xMax),
 			0.0f, 
-			Mathf.Clamp(playerRigidbody.position.z,(cam.transform.position.z + boundary.zMin),(cam.transform.position.z - boundary.zMax))
+			Mathf.Clamp(playerRigidbody.position.z,(cam.transform.position.z - boundary.zMin),(cam.transform.position.z + boundary.zMax))
 		);
 		/* Survival Shooter Movement
 		movement.Set (h, 0f, v);
