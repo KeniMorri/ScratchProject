@@ -44,7 +44,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Move (float h, float v) {
-		Vector3 movement = new Vector3 (h, 0.0f, v);
+		
+		Vector3 movement = new Vector3 (h, 0.0f, (0.4f + v) );
 		playerRigidbody.velocity = (movement * speed);
 		/* This is supposed to make it so character can't leave boundary, but i can't get it to work properly
 		playerRigidbody.position = new Vector3 (
